@@ -1,60 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
 		<title>Auro</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
-
-		<!-- show a circular logo from assets/logo.png -->
-		<div>
-			<img src="assets/logo.png" alt="Auro" class="logo" />
-			<h1>Auro</h1>
-			<p>this is my scuffed website</p>
-			<ul>
-				<li>
-					<a href="https://github.com/mrauro">i have a github</a>
-				</li>
-				<li>
-					<a href="https://twitter.com/auror6s">i have a twitter</a>
-				</li>
-				<li>
-					<a href="https://twitch.tv/auror6s/">i have an twitch (and an active offline chat)</a>
-				</li>
-			</ul>
-
-			<h3>projects:</h3>
-			<ul>
-				<li>
-					<a href="https://github.com/mrauro/toolerino">toolerino</a>
-				</li>
-				<li>
-					<a href="https://twitch.tv/oura_bot">oura_bot</a>
-				</li>
-				<li>
-					<a href="https://github.com/mrauro/ouraemotes">ouraemotes</a>
-				</li>
-			</ul>
-		</div>
+		<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+		<link rel="icon" href="assets/logo.png" />
 	</head>
+	<body>
+		<div id="console">
+			<span id="a"><b>auro@auro</b></span
+			><span>:</span><span id="c"><b>~</b></span
+			><span><b>$</b></span> <span><b>cd /about/</b></span>
+
+			<br />
+
+			<span id="a"><b>auro@auro</b></span
+			><span>:</span><span id="c"><b>~/about</b></span
+			><span><b>$</b></span> <span><b>cat auro.txt</b></span>
+
+			<br />
+			<br />
+
+			Auro:
+
+			<br />
+			<br />
+
+			I'm a programmer that likes making bots and other useful utilities. I am currently working on:
+			<br />
+			<br />
+
+			<a href="https://twitch.tv/oura_bot/">&gt; <b>OuraBot</b></a
+			>, my highly functional Twitch Bot
+
+			<br />
+			<br />
+
+			<a href="https://github.com/mrauro/toolerino">&gt; <b>Toolerino</b></a
+			>, a Twitch app with many chat utilities
+
+			<br />
+			<br />
+
+			<a href="https://github.com/mrauro/ouraemotes">&gt; <b>OuraEmotes</b></a
+			>, a Discord bot for adding Twitch emotes to your server
+
+			<br />
+			<br />
+
+			<a href="https://github.com/mrauro/uploader">&gt; <b>File Uploader</b></a
+			>, my custom image/file uploading service
+
+			<br />
+			<br />
+			<br />
+
+			You can find me on:
+
+			<br />
+			<br />
+
+			<a href="https://github.com/mrauro">&gt; <b>GitHub</b></a>
+
+			<br />
+			<br />
+
+			<a href="https://twitter.com/auror6s">&gt; <b>Twitter</b></a>
+
+			<br />
+			<br />
+
+			<a href="https://twitch.com/auror6s">&gt; <b>Twitch</b></a>
+
+			<br />
+			<br />
+
+			<a href="https://discord.gg/ZHqpuszdaM">&gt; <b>Discord</b></a>
+		</div>
+	</body>
 </html>
-
 <style>
-	/* center all elements vertically and horizontally */
-	html,
 	body {
-		height: 100%;
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-family: 'Roboto', sans-serif;
+		background-color: #000;
 	}
-
-	h1 {
-		font-size: 3.5rem;
+	#console {
+		font-family: courier, monospace;
+		color: #fff;
+		width: 750px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+		font-size: 16px;
+	}
+	a {
+		color: #0bc;
+		text-decoration: none;
+	}
+	#a {
+		color: #0f0;
+	}
+	#c {
+		color: #3b78ff;
+	}
+	#b {
+		color: #00d9ff;
 	}
 </style>
+<script>
+	var text = document.getElementById('console');
+
+	var textToType = text.innerHTML.split('Auro:')[0];
+	var textToPut = text.innerHTML.split('Auro:')[1];
+
+	var typewriter = new Typewriter(text, {
+		loop: false,
+		delay: 10,
+		autoStart: true,
+		cursor: '_',
+	});
+
+	typewriter.typeString(textToType).pauseFor(100).pasteString(textToPut).start();
+</script>
